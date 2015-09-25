@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+ <managed-bean>
+  <managed-bean-name>contactBean</managed-bean-name>
+  <managed-bean-class>br.ufrn.imd.web2.bean.ContactBean</managed-bean-class>
+  <managed-bean-scope>session</managed-bean-scope>
+  <managed-property>
+   <property-name>contactBox</property-name>
+   <property-class>java.lang.Integer</property-class>
+   <value/>
+  </managed-property>
+ </managed-bean>
+ <managed-bean>
+  <managed-bean-name>loginBean</managed-bean-name>
+  <managed-bean-class>br.ufrn.imd.web2.bean.LoginBean</managed-bean-class>
+  <managed-bean-scope>session</managed-bean-scope>
+  <managed-property>
+   <property-name>dbUsername</property-name>
+   <property-class>java.lang.String</property-class>
+   <value/>
+  </managed-property>
+  <managed-property>
+   <property-name>dbPassword</property-name>
+   <property-class>java.lang.String</property-class>
+   <value/>
+  </managed-property>
+  <managed-property>
+   <property-name>dbIdUser</property-name>
+   <property-class>java.lang.Integer</property-class>
+   <value/>
+  </managed-property>
+ </managed-bean>
+ <navigation-rule>
+  <from-view-id>/pages/index.xhtml</from-view-id>
+  <navigation-case>
+   <from-outcome>contactList</from-outcome>
+   <to-view-id>/pages/contactList.xhtml</to-view-id>
+  </navigation-case>
+ </navigation-rule>
+ <navigation-rule>
+  <from-view-id>/pages/contactList.xhtml</from-view-id>
+  <navigation-case>
+   <from-outcome>contactDetail</from-outcome>
+   <to-view-id>/pages/contactDetail.xhtml</to-view-id>
+  </navigation-case>
+  <navigation-case>
+   <from-outcome>contactAdd</from-outcome>
+   <to-view-id>/Pages/contactAdd.xhtml</to-view-id>
+  </navigation-case>
+ </navigation-rule>
+ <application/>
+</faces-config>

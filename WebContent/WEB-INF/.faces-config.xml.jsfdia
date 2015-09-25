@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#pages#contactDetail.xhtml"
+  PATH="/pages/contactDetail.xhtml" SHAPE="616,448,50,25"
+  model-entity="JSFProcessGroup" persistent="true"/>
+ <PROCESS-ITEM NAME="rules:#pages#index.xhtml" PATH="/pages/index.xhtml"
+  SHAPE="280,464,50,25" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#pages#index.xhtml:0" NAME="item"
+   PATH="/pages/index.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="contactList::#pages#contactList.xhtml"
+    NAME="output" PATH="/pages/contactList.xhtml"
+    TARGET="rules:#pages#contactList.xhtml" TITLE="contactList" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#pages#contactList.xhtml"
+  PATH="/pages/contactList.xhtml" SHAPE="440,456,50,25" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#pages#contactList.xhtml:0" NAME="item"
+   PATH="/pages/contactList.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="contactDetail::#pages#contactDetail.xhtml"
+    NAME="output" PATH="/pages/contactDetail.xhtml"
+    TARGET="rules:#pages#contactDetail.xhtml" TITLE="contactDetail" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="contactAdd::#Pages#contactAdd.xhtml"
+    NAME="output1" PATH="/Pages/contactAdd.xhtml"
+    TARGET="rules:#Pages#contactAdd.xhtml" TITLE="contactAdd" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#Pages#contactAdd.xhtml"
+  PATH="/Pages/contactAdd.xhtml" SHAPE="632,328,50,25"
+  model-entity="JSFProcessGroup" persistent="true"/>
+ <PROCESS-ITEM NAME="rules:#Pages#loginError.xhtml"
+  PATH="/Pages/loginError.xhtml" SHAPE="296,248,50,25"
+  model-entity="JSFProcessGroup" persistent="true"/>
+</PROCESS>

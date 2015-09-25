@@ -1,0 +1,22 @@
+Você precisará incluir pelo menos um arquivo txt contento a lista de
+páginas criadas (e suas funcionalidades), a lista de beans criados, e a estratégia utilizada para
+representar a camada de dados.
+
+Foram criadas 6 páginas, são elas:
+index.xhtml - Página inicial que o usuário pode fazer o login e se cadastrar na agenda.
+loginError.xhtml - Quando o login ou senha são inseridos errados vai para essa página informando o erro.
+contactList.xhtml - Mostra a lista dos nomes dos contatos da agenda de acordo com o usuário logado. Existem botões que
+permitem a criação de novos contatos, editar, remover ou visualizar.
+contactEdit.xhtml - Vai para uma página com os campos preenchidos do contato selecionado para fazer a edição.
+contactDetail.xhtml - Mostra os detalhes completos do contato selecionado.
+contactAdd.xhtml - Página para criação e armazenamento de um novo contato.
+
+Estratégia:
+Foram criadas as classes Contact e Login que possuem os atributos e gets/sets das classes;
+As pages e manageBeans foram criados via faces-config;
+Foram criados dois beans ContactBean e LoginBean;
+Os dados foram inseridos nos beans;
+
+Dificuldade:
+Como recuperar sessão em outra página, minha lista de contatos está sendo de escolhida de forma estática no xhtml
+pois não consegui recuperar o idUsuario na página que lista os contatos.

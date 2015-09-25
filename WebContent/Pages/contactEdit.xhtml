@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Detalhes do Contato - WEB II</title>
+</head>
+<body>
+<f:view>
+<h1>Edite o contato -</h1>
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:outputText id="txtUserField" value="Nome: " />
+			<h:inputText id="nUserField" required="true" requiredMessage="Campo obrigatorio" value="#{contactBean.searchContact().nome}" />
+			<h:outputText id="txtAddressField" value="Endereco: " />
+			<h:inputText id="nAddressField" required="true" requiredMessage="Campo obrigatorio" value="#{contactBean.searchContact().endereco}" />
+			<h:outputText id="txtEmailField" value="E-mail: " />
+			<h:inputText id="nEmailField" required="true" requiredMessage="Campo obrigatorio" value="#{contactBean.searchContact().email}" />
+			<h:outputText id="txtTelefoneField" value="Telefone: " />
+			<h:inputText id="nTelefoneField" required="true" requiredMessage="Campo obrigatorio" value="#{contactBean.searchContact().telefone}" />
+			<h:outputText id="txtCelField" value="Celular: " />
+			<h:inputText id="nCelField" required="true" requiredMessage="Campo obrigatorio" value="#{contactBean.searchContact().celular}" />
+			<br/>
+		</h:panelGrid>
+		<h:commandButton id="confirmButton" value="Salve" action="#{contactBean.editContact()}" />
+		<h:commandButton id="backButton" value="Voltar" action="contactList"/>
+	</h:form>
+
+</f:view>
+</body>
+</html>
